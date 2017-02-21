@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp" >
+
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_weight="2"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/app_label"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_weight="5"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_weight="3"
+        android:gravity="center" >
+
+        <CheckBox
+            android:id="@+id/wifi_checkbox"
+            style="@style/CustomCheckboxTheme"
+            android:layout_marginStart="15dp" />
+
+        <CheckBox
+            android:id="@+id/mobile_checkbox"
+            android:layout_marginStart="12dp"
+            style="@style/CustomCheckboxTheme" />
+    </LinearLayout>
+
+</LinearLayout>

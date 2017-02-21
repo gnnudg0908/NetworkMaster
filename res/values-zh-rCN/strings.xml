@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">网络控制</string>
+    <string name="action_settings">Settings</string>
+    <string name="wifi_title">Wifi</string>
+    <string name="mobile_title">数据</string>
+    <string name="select_all_title">全选</string>
+    <string name="disable_title">网络控制</string>
+    <string name="start_at_boot_not_allowed">请检查网络控制是否被禁止开机启动，否则重启后网络控制设置将会失效!</string>
+</resources>
