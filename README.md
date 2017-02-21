@@ -5,4 +5,4 @@ We can call setFirewallUidChainRule() to disable wifi and mobile network.
 Just like goole code droidwall does, it's based on iptables.
 
 Note:
-    NetworkControl need framework.jar support, complie in eclipse or studio need library framework.jar
+    NetworkControl need framework.jar support, compile in eclipse or studio need library framework.jar
