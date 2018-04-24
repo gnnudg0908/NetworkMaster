@@ -1,3 +1,19 @@
+
+/*
+ *     This program is free software: you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation, either version 3 of the License, or
+ *     (at your option) any later version.
+ *
+ *     This program is distributed in the hope that it will be useful,
+ *     but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *     GNU General Public License for more details.
+ *
+ *     You should have received a copy of the GNU General Public License
+ *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package com.soap.networkmaster;
 
 import java.lang.reflect.InvocationTargetException;
@@ -9,12 +25,17 @@ import java.util.Comparator;
 import java.util.List;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 
+/**
+ * @author soap
+ * @github https://github.com/gnnudg0908/
+ * @QQ 695144933
+ * Date: 2018/4/24
+ */
 public class Utils {
     private static final String TAG = "Utils";
 
@@ -145,49 +166,6 @@ public class Utils {
                 return -1;
         }
     }
-
-/*    *//*
-     * 将状态保存到SharedPreferences
-     *//*
-    public static void saveData(Context context, String pkgName, int uid, String type, boolean enable) {
-        SharedPreferences sharedPref = context.getApplicationContext().getSharedPreferences(SHARED_PF, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        String key = pkgName + "_" + uid + "_" + type;
-        editor.putBoolean(key, enable);
-        editor.commit();
-    }
-
-    *//*
-     * 从SharedPreferences读取状态
-     *//*
-    public static boolean readData(Context context, String pkgName, int uid, String type) {
-        SharedPreferences sharedPref = context.getApplicationContext().getSharedPreferences(SHARED_PF, Context.MODE_PRIVATE);
-        String key = pkgName + "_" + uid + "_" + type;
-        return sharedPref.getBoolean(key, false);
-    }
-
-    public static void removeData(Context context, String pkgName, int uid) {
-        SharedPreferences sharedPref = context.getApplicationContext().getSharedPreferences(SHARED_PF, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        String wifiKey = pkgName + "_" + uid + "_" + TYPE_WIFI;
-        String mobileKey = pkgName + "_" + uid + "_" + TYPE_MOBILE;
-        LogUtils.d(TAG, "removeData() wifiKey=" + wifiKey + "   mobileKey=" + mobileKey);
-        editor.remove(wifiKey);
-        editor.remove(mobileKey);
-        editor.commit();
-    }
-
-    public static void saveInitFwFlag(Context context, boolean enable) {
-        SharedPreferences sharedPref = context.getApplicationContext().getSharedPreferences(SHARED_PF, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putBoolean(INIT_FW_KEY, enable);
-        editor.commit();
-    }
-
-    public static boolean readInitFwFlag(Context context) {
-        SharedPreferences sharedPref = context.getApplicationContext().getSharedPreferences(SHARED_PF, Context.MODE_PRIVATE);
-        return sharedPref.getBoolean(INIT_FW_KEY, false);
-    }*/
 
     public static String getSystemProperties(String key, String defaultValue) throws IllegalArgumentException {
         String value = defaultValue;
