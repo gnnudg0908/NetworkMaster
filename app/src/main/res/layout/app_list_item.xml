@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="45dp"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp">
+
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/app_label"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/app_icon"
+        android:layout_toStartOf="@id/wifi_container"
+        android:gravity="center_vertical"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <!--<Switch
+        android:id="@+id/wifi"
+        style="@style/SwitchStyle"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@id/mobile" />
+
+    <Switch
+        android:id="@+id/mobile"
+        style="@style/SwitchStyle"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp" />-->
+
+    <LinearLayout
+        android:id="@+id/wifi_container"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@id/mobile_container"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/wifi_title"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/wifi_title"
+            android:visibility="invisible"/>
+
+        <Switch
+            android:id="@+id/wifi"
+            style="@style/SwitchStyle"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mobile_container"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mobile_title"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/mobile_title"
+            android:visibility="invisible"/>
+
+        <Switch
+            android:id="@+id/mobile"
+            style="@style/SwitchStyle"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+</RelativeLayout>
